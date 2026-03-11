@@ -1,120 +1,238 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Reymart Salcedo-Lagunero | Profile</title>
-  <!-- Responsive viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Fonts for clean typography -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:400,700">
-  <!-- Font Awesome for section and social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Site — Home</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      color: #333;
-      line-height: 1.6;
+    :root{
+      --bg:#f7f9fb; --card:#ffffff; --accent:#2563eb; --muted:#6b7280; --radius:12px;
+      --max-width:1000px;
     }
-    header {
-      background: #2C3E50 url('https://upload.wikimedia.org/wikipedia/commons/9/97/Einstein_formula_on_blackboard_20190401.jpg') no-repeat center/cover;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; margin:0; background:var(--bg); color:#0f172a; line-height:1.5}
+    .container{max-width:var(--max-width); margin:28px auto; padding:20px}
+    header{display:flex; gap:20px; align-items:center; margin-bottom:18px}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav{margin-left:auto}
+    nav ul{display:flex;gap:8px;list-style:none;padding:0;margin:0}
+    nav a{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
+    nav a.active{background:rgba(37,99,235,0.1);color:var(--accent)}
+    main{background:transparent}
+    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    h1{margin:0 0 8px 0}
+    p.lead{color:var(--muted);margin-top:0}
+    .row{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:16px}
+    aside.card{height:fit-content}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .row{grid-template-columns:1fr;}
+      nav ul{flex-wrap:wrap}
     }
-    header img.profile-pic {
-      max-width: 150px;
-      height: auto;
-      border: 3px solid #000000;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      margin: 10px 0 5px;
-      font-family: 'Roboto Slab', serif;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.1rem;
-      margin: 0;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    /* Alternate section background for contrast */
-    section:nth-child(even) {
-      background: #f9f9f9;
-    }
-    section:nth-child(odd) {
-      background: #ffffff;
-    }
-    section h2 {
-      font-family: 'Roboto Slab', serif;
-      margin-top: 0;
-      display: flex;
-      align-items: center;
-      font-size: 1.8rem;
-    }
-    section h2 i {
-      margin-right: 10px;
-      color: #2980B9;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin: 8px 0;
-      display: flex;
-      align-items: flex-start;
-    }
-    ul li i.fa-li {
-      position: absolute;
-      margin-left: -1.5em;
-      color: #2980B9;
-      line-height: 1.6;
-    }
-    /* Basic responsive adjustments */
-    @media (min-width: 600px) {
-      .container { max-width: 800px; margin: 0 auto; }
-      section ul { padding-left: 1.5em; }
-    }
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;color:#312e81;font-weight:700;font-size:13px}
+    .cv-list{margin:0;padding-left:18px}
   </style>
 </head>
 <body>
-  <header>
-    <img class="profile-pic" src="images/profile.jpg" alt="Reymart Salcedo-Lagunero Profile Photo">
-    <h1>Reymart Salcedo-Lagunero BSc MSc</h1>
-    <p>PhD Candidate in Mathematics, University of Graz, Austria</p>
-  </header>
-
   <div class="container">
-    <!-- About Section -->
-    <section id="about">
-      <h2><i class="fa fa-user"></i>About</h2>
-      <p>I am currently a PhD Mathematics candidate at the University of Graz, Austria.</p>
-    </section>
+    <header>
+      <div class="brand">
+        <div class="logo">RSL</div>
+        <div>
+          <div style="font-weight:700">Reymart Salcedo Lagunero</div>
+          <div style="font-size:13px;color:var(--muted)">Mathematician • Researcher • Educator</div>
+        </div>
+      </div>
 
-    <!-- Education Section -->
-    <section id="education">
-      <h2><i class="fa fa-graduation-cap"></i>Education</h2>
-      <ul class="fa-ul">
-        <li><i class="fa-li fa fa-circle"></i><strong>Dr. rer. nat. (Mathematics)</strong>, University of Graz (PhD candidate, expected 2025)</li>
-        <li><i class="fa-li fa fa-circle"></i><strong>M.Sc. Mathematics</strong>, University of the Philippines (2018)</li>
-        <li><i class="fa-li fa fa-circle"></i><strong>B.Sc. Mathematics</strong>, University of the Philippines (2014)</li>
-      </ul>
-    </section>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" data-route="home" id="link-home">Home</a></li>
+          <li><a href="#about" data-route="about" id="link-about">About Me</a></li>
+          <li><a href="#teaching" data-route="teaching" id="link-teaching">Teaching</a></li>
+          <li><a href="#research" data-route="research" id="link-research">Research</a></li>
+          <li><a href="#cv" data-route="cv" id="link-cv">CV</a></li>
+          <li><a href="#extracurricular" data-route="extracurricular" id="link-extracurricular">Extracurricular</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2><i class="fa fa-envelope"></i>Contact</h2>
-      <p>You can find me on:</p>
-      <ul class="fa-ul">
-        <li><i class="fa-li fa fa-linkedin-square"></i><a href="https://www.linkedin.com/in/reymartsalcedo/" target="_blank">LinkedIn</a></li>
-        <li><i class="fa-li fa fa-github"></i><a href="https://github.com/reymartsalcedo" target="_blank">GitHub</a></li>
-        <li><i class="fa-li fa fa-globe"></i><a href="https://sites.google.com/view/reymartsalcedo" target="_blank">Personal Website</a></li>
-        <li><i class="fa-li fa fa-envelope"></i><a href="mailto:reymartsalcedo@gmail.com">Email Me</a></li>
-      </ul>
-    </section>
+    <main>
+      <!-- Each section acts as a "subpage". The script below shows/hides sections based on the URL hash. -->
+
+      <section id="home" class="page card" data-title="Home">
+        <h1>Home</h1>
+        <p class="lead">Welcome to my personal website!</p>
+
+        <div class="row">
+          <div>
+            <div class="card">
+              <h2>Intro</h2>
+              <p class="muted">A short paragraph about you could go here. Mention your research interests, the languages and tools you use, and your current affiliation.</p>
+              <ul>
+                <li>Research: Mathematical modelling, PDEs, numerical analysis</li>
+                <li>Tools: Python, FEniCSx, Matlab</li>
+                <li>Interests: Scientific computing, teaching, open-source</li>
+              </ul>
+            </div>
+
+            <div style="height:12px"></div>
+
+            <div class="card">
+              <h3>Quick links</h3>
+              <p class="muted">Jump to a subpage:</p>
+              <p><a href="#about">About Me</a> • <a href="#teaching">Teaching</a> • <a href="#research">Research</a> • <a href="#cv">CV</a></p>
+            </div>
+          </div>
+
+          <aside class="card">
+            <h3>Contact</h3>
+            <p class="muted">Reymart Salcedo Lagunero</p>
+            <p><strong>Email:</strong> reymartsalcedo@gmail.com</p>
+            <p><strong>Location:</strong> Graz, Austria</p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="page card" data-title="About Me" style="display:none">
+        <h1>About Me</h1>
+        <p class="lead">Short biography and background.</p>
+        <div class="card" style="margin-top:12px">
+          <h2>Biography</h2>
+          <p>Currently, a PhD Mathematics candidate at the University of Graz, Austria under the International Research Training Group Munich - Graz (IGDK 1754) "Optimization and Numerical Analysis of Partial Differential Equations with Nonsmooth Structures", funded by German Research Foundation (DFG) and Austrian Science Fund (FWF). <br/> <br/>I am also an active member of the Mathematical Society of the Philippines, the Southeast Asian Mathematical Society, and the Philippine Society for Mathematical Biology.</p>
+          <h3>Education</h3>
+          <ul>
+            <li>PhD Mathematics, University of Graz, Austria</li>
+            <li>MSc Mathematics, University of the Philippines</li>
+            <li>BSc Mathematics, University of the Philippines</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="teaching" class="page card" data-title="Teaching" style="display:none">
+        <h1>Teaching</h1>
+        <p class="lead">Teaching experience, courses, and materials.</p>
+        <div class="card" style="margin-top:12px">
+          <h2>Courses taught</h2>
+          <ul>
+            <li>Numerical Analysis — undergraduate</li>
+            <li>Partial Differential Equations — graduate</li>
+            <li>Computational Methods with FEniCSx — workshop</li>
+          </ul>
+
+          <h3>Materials</h3>
+          <p class="muted">Provide links to lecture notes, slides, or github repositories.</p>
+        </div>
+      </section>
+
+      <section id="research" class="page card" data-title="Research Activities" style="display:none">
+        <h1>Research Activities</h1>
+        <p class="lead">Summary of current projects, past work, and publications.</p>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Current projects</h2>
+          <ul>
+            <li>Multiscale PDE models for biological tissues — developing coupled PDE systems and numerical solvers.</li>
+            <li>Structure-preserving discretizations for nonlinear diffusion equations.</li>
+            <li>Benchmarking FEniCSx solvers on complex geometries and submeshes.</li>
+          </ul>
+
+          <h3>Selected publications & preprints</h3>
+          <ul>
+            <li>Author A., Author B., <em>Title of a paper</em>, Journal, Year.</li>
+            <li>Author A., <em>Preprint: A reproducible FEniCSx example for submeshes</em>, arXiv (Year).</li>
+          </ul>
+
+          <h3>Tools & methods</h3>
+          <p class="muted">Numerical analysis, finite element methods, error estimation, Python toolchain (NumPy, SciPy, FEniCSx), Matlab for prototyping.</p>
+
+          <h3>Collaborations</h3>
+          <p class="muted">Open to discussions and collaborations — list partners, labs, or funding sources here.</p>
+        </div>
+      </section>
+
+      <section id="cv" class="page card" data-title="CV" style="display:none">
+        <h1>CV</h1>
+        <p class="lead">Short CV summary. Scroll for a quick view or link a downloadable CV.</p>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Selected positions</h2>
+          <ul>
+            <li>PhD Candidate — University Name (Year–Present)</li>
+            <li>Research Assistant — Lab/Group (Year–Year)</li>
+          </ul>
+
+          <h3>Skills</h3>
+          <ul class="cv-list">
+            <li>Programming: Python, Matlab, C++ (basic)</li>
+            <li>Libraries: FEniCSx, NumPy, SciPy, Matplotlib</li>
+            <li>Tools: Git, LaTeX, GitHub</li>
+          </ul>
+
+          <p style="margin-top:10px"><strong>Download:</strong> <em>Place a link to a PDF here once you have one.</em></p>
+        </div>
+      </section>
+
+      <section id="extracurricular" class="page card" data-title="Extracurricular" style="display:none">
+        <h1>Extracurricular</h1>
+        <p class="lead">Clubs, volunteering, and interests outside work.</p>
+        <div class="card" style="margin-top:12px">
+          <h2>Activities</h2>
+          <ul>
+            <li>Organizer, local coding workshops</li>
+            <li>Volunteer tutor for math outreach programs</li>
+            <li>Hiking, landscape photography</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="muted">© Reymart Salcedo Lagunero — <span id="year"></span></div>
+    </footer>
   </div>
+
+  <script>
+    /* Simple hash-based router to treat sections as subpages. */
+    const pages = document.querySelectorAll('.page');
+    const links = document.querySelectorAll('nav a');
+    function showPage(name){
+      pages.forEach(p => {
+        if (p.id === name) p.style.display = '';
+        else p.style.display = 'none';
+      });
+      links.forEach(a => a.classList.toggle('active', a.dataset.route === name));
+      const page = document.getElementById(name);
+      document.title = (page ? page.dataset.title : 'Personal Site') + ' — Personal Site';
+      window.scrollTo(0,0);
+    }
+
+    function handleHash(){
+      const h = location.hash.replace('#','') || 'home';
+      const allowed = ['home','about','teaching','research','cv','extracurricular'];
+      const target = allowed.includes(h) ? h : 'home';
+      showPage(target);
+    }
+
+    window.addEventListener('hashchange', handleHash);
+    // initialize
+    handleHash();
+
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // keyboard navigation: numbers 1-6 switch pages
+    window.addEventListener('keydown', e => {
+      if (e.metaKey || e.ctrlKey) return;
+      const map = {"1":"home","2":"about","3":"teaching","4":"research","5":"cv","6":"extracurricular"};
+      if (map[e.key]) location.hash = '#'+map[e.key];
+    });
+  </script>
 </body>
 </html>
