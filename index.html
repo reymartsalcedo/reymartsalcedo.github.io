@@ -20,12 +20,17 @@
     nav a{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
     nav a.active{background:rgba(37,99,235,0.1);color:var(--accent)}
     main{background:transparent}
-    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .card{background:var(--card);padding:12px 18px 18px 18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.06)}
     h1{margin:0 0 8px 0}
+    .card h1, .card h2, .card h3{margin-top:0}
     p.lead{color:var(--muted);margin-top:0}
     .row{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:16px}
     aside.card{height:fit-content}
     footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px}
+    div {
+      text-align: justify;
+      text-justify: inter-word;
+    }
 
     /* responsive */
     @media (max-width:880px){
@@ -47,7 +52,7 @@
         <div class="logo">RSL</div>
         <div>
           <div style="font-weight:700">Reymart Salcedo-Lagunero</div>
-          <div style="font-size:13px;color:var(--muted)">Mathematician • Educator • Seeker</div>
+          <!-- <div style="font-size:13px;color:var(--muted)">Mathematician • Educator • Seeker</div> -->
         </div>
       </div>
 
@@ -89,9 +94,10 @@
 
         <div class="card">
           <h3>Contact</h3>
-          <p class="muted">Reymart Salcedo-Lagunero MSc. Dr.rer.nat.</p>
-          <p><strong>Email:</strong> reymartsalcedo@gmail.com</p>
-          <p><strong>Location:</strong> Anton-Wildgans-Weg 15/42, Graz 8043 Austria</p>
+          <p>Reymart Salcedo-Lagunero<br>
+             reymartsalcedo@gmail.com<br>
+             <s>Anton-Wildgans-Weg 15/42, Graz 8043 Austria</s>
+          </p>
         </div>
 
         <div style="height:12px"></div>
@@ -105,31 +111,25 @@
       <section id="about" class="page card" data-title="About Me" style="display:none">
         <h1>About Me</h1>
 
-        <div style="display:grid; grid-template-columns:220px 1fr; gap:20px; align-items:start; margin-top:10px">
+        <div style="display:grid; grid-template-columns:220px 1fr; gap:20px; align-items:start; margin-top:0px">
 
           <!-- Photo -->
           <div>
             <img src="images/profile.jpg" alt="Reymart Salcedo-Lagunero Dr.rer.nat." style="width:100%; border-radius:10px;">
 
-            <p>  </p>
+            <p> I am an active member of the Mathematical Society of the Philippines (MSP), the Southeast Asian Mathematical Society (SEAMS), the Philippine Society for Mathematical Biology (PSMB), and the European Society for Mathematical and Theoretical Biology (ESMTB). </p>
           </div>
 
           <!-- Text -->
-          <div>
-            <p class="lead">
-              I am an active member of the Mathematical Society of the Philippines (MSP), the Southeast Asian Mathematical Society (SEAMS), the Philippine Society for Mathematical Biology (PSMB), and the European Society for Mathematical and Theoretical Biology (ESMTB).
-            </p>
+          <div class="card">
+            <h2>Upcoming</h2>
+            <p>Starting 01. May 2026, postdoc with <a href="https://creisch.github.io/" target="_blank">Univ.-Assoc.Prof. Dr.in Cordula Reisch</a> at the Department of Science and Environment, Roskilde University, Denmark.</p>
 
-            <div class="card" style="margin-top:12px">
-              <h2>Upcoming</h2>
-              <p>Starting 01. May 2026, postdoc with <a href="https://creisch.github.io/" target="_blank">Univ.-Assoc.Prof. Dr.in Cordula Reisch</a> at the Department of Science and Environment, Roskilde University, Denmark.</p>
+            <h2>Currently</h2>
+            <p>Starting 17. Nov 2025, postdoc with <a href="https://imsc.uni-graz.at/fellnerk/" target="_blank">Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</a> at the Department of Mathematics and Scientifi Computing, University of Graz, Austria.</p>
 
-              <h2>Currently</h2>
-              <p>Starting 17. Nov 2025, postdoc with <a href="https://imsc.uni-graz.at/fellnerk/" target="_blank">Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</a> at the Department of Mathematics and Scientifi Computing, University of Graz, Austria.</p>
-
-              <h2>Previously</h2>
-              <p>PhD Mathematics student at the University of Graz, Austria under the <a href="https://igdk1754.ma.tum.de/WebHome.html" target="_blank">International Research Training Group Munich - Graz (IGDK 1754)</a> "Optimization and Numerical Analysis of Partial Differential Equations with Nonsmooth Structures", funded by the German Research Foundation (DFG) and Austrian Science Fund (FWF). Supervised by <a href="https://imsc.uni-graz.at/fellnerk/" target="_blank">Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</a> at Uni Graz and <a href="https://www.unibw.de/imcs/team/apel" target="_blank">Univ.-Prof. Dr.rer.nat. habil. Thomas Apel</a> at the Bundeswehr Uni Munich.</p>
-            </div>
+            <h2>Previously</h2>
+            <p>PhD Mathematics student at the University of Graz, Austria under the <a href="https://igdk1754.ma.tum.de/WebHome.html" target="_blank">International Research Training Group Munich - Graz (IGDK 1754)</a> "Optimization and Numerical Analysis of Partial Differential Equations with Nonsmooth Structures", funded by the German Research Foundation (DFG) and Austrian Science Fund (FWF). Supervised by <a href="https://imsc.uni-graz.at/fellnerk/" target="_blank">Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</a> at Uni Graz and <a href="https://www.unibw.de/imcs/team/apel" target="_blank">Univ.-Prof. Dr.rer.nat. habil. Thomas Apel</a> at the Bundeswehr Uni Munich.</p>
           </div>
         </div>
       </section>
@@ -224,7 +224,7 @@
           </ul>
 
           <h3>Materials</h3>
-          <p class="muted">Provide links to lecture notes, slides, or github repositories.</p>
+          <p class="muted"><s>Links to lecture notes, slides, or github repositories.</s></p>
         </div>
       </section>
 
@@ -268,10 +268,10 @@
           <ul>
             <li>2019 - 2025 Department of Mathematics and Scientific Computing, University of Graz, Austria</li>
             <ul>
-              <li>11.2025 - 03.2026 University Assistant Postdoc with Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</li>
-              <li>10.2024 - 03.2025 University Assistant Praedoc with Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</li>
-              <li>01.2024 - 06.2024 University Assistant Praedoc with Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</li>
-              <li>08.2019 - 08.2023 Project Assistant - PhD Student - IGDK 1754 Munich - Graz</li>
+              <li>11.2025 - 03.2026 University Assistant Postdoc with <a href="https://imsc.uni-graz.at/fellnerk/" target="_blank">Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</a></li>
+              <li>10.2024 - 03.2025 University Assistant Praedoc with <a href="https://imsc.uni-graz.at/fellnerk/" target="_blank">Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</a></li>
+              <li>01.2024 - 06.2024 University Assistant Praedoc with <a href="https://imsc.uni-graz.at/fellnerk/" target="_blank">Univ.-Prof. Dipl.-Ing. Dr.techn. Klemens Fellner</a></li>
+              <li>08.2019 - 08.2023 Project Assistant - PhD Student - <a href="https://igdk1754.ma.tum.de/WebHome.html" target="_blank">International Research Training Group Munich - Graz (IGDK 1754)</a></li>
             </ul>
             <li>2014 - 2019 Department of Mathematics and Computer Science, University of the Philippines Baguio</li>
             <ul>
@@ -280,15 +280,7 @@
               <li>08.2014 - 07.2016 Instructor 1</li>
             </ul>
           </ul>
-
-          <h3>Skills</h3>
-          <ul class="cv-list">
-            <li>Programming: Python, Matlab</li>
-            <li>Libraries: FEniCSx, NumPy, SciPy, Matplotlib</li>
-            <li>Tools: LaTeX, GitHub</li>
-          </ul>
-
-          <p style="margin-top:10px"><strong>Download:</strong> <em>Place a link to a PDF here once you have one.</em></p>
+          <p style="margin-top:10px"><strong>Download:</strong> <em><s>Link to short CV pdf.</s></em></p>
         </div>
       </section>
 
@@ -308,7 +300,7 @@
     </main>
 
     <footer>
-      <div class="muted">© Reymart Salcedo-Lagunero MSc. Dr.rer.nat. — <span id="year"></span></div>
+      <div class="muted">© Reymart Salcedo-Lagunero — <span id="year"></span></div>
     </footer>
   </div>
 
