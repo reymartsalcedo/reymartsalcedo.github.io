@@ -26,7 +26,7 @@
     main{background:transparent}
     .card{
       background:var(--card);
-      padding:10px 18px 10px 18px;
+      padding:8px 12px;
       border-radius:var(--radius);
       box-shadow:0 6px 18px rgba(15,23,42,0.06)}
     h1{margin:0 0 0 0}
@@ -35,10 +35,20 @@
     .card :is(h1, h2, h3) {
       margin-top: 0;
     }
+    .card p {
+      margin: 5px 0;
+    }
+
+    .card ul {
+      margin: 5px 0;
+      padding-left: 16px;
+    }
+
     p.lead{color:var(--muted);margin-top:0}
     .row{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:16px}
     aside.card{height:fit-content}
     footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px}
+
     div {
       text-align: justify;
       text-justify: inter-word;
@@ -98,7 +108,7 @@
 
         <div class="row">
           <div class="card">
-            <h3>Intro</h3>
+            <h2>Intro</h2>
             <p class="muted">My research is focused on mathematical modelling, analysis, and numerical simulations of systems arising from the natural sciences.</p>
             <ul>
               <li><b>Research:</b> Mathematical Biology, Reaction Diffusion Systems, PDE with Delays, Scientific Computing</li>
@@ -106,13 +116,13 @@
           </div>
 
           <aside class="card">
-            <h3>Upcoming</h3>
+            <h2>Upcoming</h2>
             <p>Starting 01. May 2026, postdoc with <a href="https://creisch.github.io/" target="_blank">Univ.-Assoc.Prof. Dr.in Cordula Reisch</a> at the Department of Science and Environment, Roskilde University, Denmark.</p>
           </aside>
         </div>
 
         <div class="card" style="margin-top:12px">
-          <h3>Interesting Events</h3>
+          <h2>Interesting Events</h2>
           <ul>
             <li>18-22.05.2026: <a href="http://www.esgi.dk/" target="_blank">ESGI European Study Group for Industry</a>, Danmarks Tekniske Universitet</li>
             <li>15-19.06.2026: <a href="https://sites.google.com/go.ugr.es/biomat2026/home" target="_blank">BIOMAT 2026</a>, Universidad de Granada</li>
@@ -123,18 +133,19 @@
 
         <div class="row">
           <div class="card">
-          <h3>Contact</h3>
-          <p>Reymart Salcedo Lagunero<br>
-             reymartsalcedo@gmail.com
-          </p>
-        </div>
+            <h2>Contact</h2>
+            <p>Reymart Salcedo Lagunero<br>
+              reymartsalcedo@gmail.com
+            </p>
+          </div>
 
-        <aside class="card">
-          <h3>Quick links</h3>
-          <p><a href="#about">About Me</a> • <a href="#teaching">Teaching</a> • <a href="#research">Research</a> • <a href="#cv">CV</a> • <a href="#extracurricular">Extracurricular</a></p>
-        </aside>
+          <aside class="card">
+            <a href="https://flagcounter.com" target="_blank">
+              <img src="https://s11.flagcounter.com/count2/example/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
+                  alt="Visitor counter" style="height:90px;">
+            </a>
+          </aside>
         </div>
-        
       </section>
 
       <section id="about" class="page card" data-title="About Me" style="display:none">
@@ -264,33 +275,33 @@
         <h1>Research Activities</h1>
 
         <div class="card" style="margin-top:12px">
-          <h3>Current Projects</h3>
+          <h2>Current Projects</h2>
           <ul>
             <li>On the enzymology of mouse ATGL -- new insights from in vitro studies and mathematical modeling</li>
             <li>Lipolysis on Lipid Droplets: Modelling and Quasi-Steady-State-Approximations</li>
             <li>Fast reaction limit from the mass-action kinetics to the Michaelis-Menten kinetics at the finite volume level</li>
           </ul>
 
-          <h3>Publications</h3>
+          <h2>Publications</h2>
           <ol reversed>
             <li>Thomas Apel, Klemens Fellner, Volker Kempf, <b>Reymart Salcedo Lagunero</b><sup>*</sup>, Philipp Zilk. <em>Lipolysis on Lipid Droplets: Mathematical Modelling and Numerical Discretisations.</em> Results Math 81, 77 (2026) <br><a href="https://doi.org/10.1007/s00025-026-02639-y" target="_blank"> DOI:10.1007/s00025-026-02639-y</a></li>
           </ol>
 
           <p><sup>*</sup><em>Corresponding Author</em></p>
 
-          <h3>Preprints</h3>
+          <h2>Preprints</h2>
           <ol reversed>
             <li></li>
           </ol>
 
-          <h3>Thesis</h3>
+          <h2>Thesis</h2>
           <ul>
             <li><b>PhD (2025) </b> <em>Lipolysis on Lipid Droplets: Mathematical Modelling, Analysis, and Numerical Discretisations.</em><br>Available Online at the <a href="https://unipub.uni-graz.at/urn/urn:nbn:at:at-ubg:1-228640" target="_blank"> University of Graz Library</a> </li>
 
             <li><b>MSc (2018) </b> <em>Well-posedness and Stability of Hyperbolic System of Partial Differential Equations with Delays.</em><br>Available Online at the <a href="https://tuklas.up.edu.ph/Record/UP-1685594773862196676" target="_blank"> University of the Philippines Library</a> </li>
           </ul>
 
-          <h3>Conferences</h3>
+          <h2>Conferences</h2>
           <ol reversed>
             <li>Annual Convention - Mathematical Society of the Philippines, Zamboanga City, Philippines<br>Jun 2025: <em>Isogeometric Analysis for Partial Differential Equations and Numerical Implementations in GeoPDEs</em></li>
             <li>Dynamical Systems Applied to Biology and Natural Sciences, Naples, Italy<br>Jan 2025: <b>**Best Poster Award**</b> <em>Lipolysis on Lipid Droplets: Modelling and Quasi-Steady-State-Approximations</em> </li>
@@ -302,7 +313,7 @@
             <li>Annual Convention - Mathematical Society of the Philippines, Cebu City, Philippines<br>Jun 2016: <em>Participant</em></li>
           </ol>
 
-          <h3>Workshops/Research Schools</h3>
+          <h2>Workshops/Research Schools</h2>
           <ol reversed>
             <li>Mathematical Methods for the Study of Self-organization in the Biological Sciences, Erwin Schrödinger Institute, Vienna, Austria<br>Dec 2020: <em>Virtual Participant</em></li>
             <li>Midyear School on Mathematics: Research Capability Building Series, University of the Philippines Baguio<br>Jul 2017: <em>Participant and Lecturer</em></li>
@@ -317,7 +328,7 @@
         <h1>Curriculum Vitae</h1>
 
         <div class="card" style="margin-top:12px">
-          <h3>Education</h3>
+          <h2>Education</h2>
 
           <ul>
             <li>10.2025 <b>Dr.rer.nat.</b> University of Graz, Austria <em>(mit Auszeichnung bestanden/with distinction)</em></li>
@@ -325,7 +336,7 @@
             <li>04.2014 <b>BSc.</b> University of the Philippines <em>(cum laude)</em></li>
           </ul>
 
-          <h3>Selected positions</h3>
+          <h2>Selected positions</h2>
           <ul>
             <li><b>Department of Mathematics and Scientific Computing, University of Graz, Austria</b></li>
             <ul>
