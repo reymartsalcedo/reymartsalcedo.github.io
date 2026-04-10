@@ -44,6 +44,17 @@
     .cv-list{margin:0;padding-left:18px}
   </style>
 
+  <script>
+  window.MathJax = {
+    tex: {
+      packages: {'[+]': ['ams']},
+      displayMath: [['\\[', '\\]']],
+      inlineMath: [['\\(', '\\)']]
+    }
+  };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
@@ -334,6 +345,31 @@
             <li>Mauris quam orci, scelerisque in tellus sit amet, ullamcorper eleifend sapien.</li>
           </ul>
         </div>
+
+        <div class="card">
+        <h2>LaTeX Test</h2>
+
+        <p>
+          Nonlinear PDE:
+        </p>
+
+        <p>
+        \[
+        \partial_t u = D \Delta u + f(u), \quad x \in \Omega
+        \]
+        </p>
+
+        <p>
+          where \( f(u) \) encodes reaction kinetics such as Michaelis-Menten dynamics:
+        </p>
+
+        <p>
+        \[
+        f(u) = \frac{V_{max} u}{K_m + u}
+        \]
+        </p>
+
+      </div>
       </section>
 
     </main>
