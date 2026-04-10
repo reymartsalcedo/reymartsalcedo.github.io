@@ -6,7 +6,11 @@
   <title>Reymart Salcedo Lagunero</title>
   <style>
     :root{
-      --bg:#f7f9fb; --card:#ffffff; --accent:#2563eb; --muted:#6b7280; --radius:12px;
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --accent:#2563eb;
+      --muted:#6b7280;
+      --radius:12px;
       --max-width:1000px;
     }
     *{box-sizing:border-box}
@@ -20,9 +24,17 @@
     nav a{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
     nav a.active{background:rgba(37,99,235,0.1);color:var(--accent)}
     main{background:transparent}
-    .card{background:var(--card);padding:12px 18px 18px 18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.06)}
-    h1{margin:0 0 8px 0}
-    .card h1, .card h2, .card h3{margin-top:0}
+    .card{
+      background:var(--card);
+      padding:10px 18px 10px 18px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    h1{margin:0 0 0 0}
+    h2{margin:0 0 0 0}
+    h3{margin:0 0 0 0}
+    .card :is(h1, h2, h3) {
+      margin-top: 0;
+    }
     p.lead{color:var(--muted);margin-top:0}
     .row{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:16px}
     aside.card{height:fit-content}
@@ -56,6 +68,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -80,8 +93,6 @@
     </header>
 
     <main>
-      <!-- Each section acts as a "subpage". The script below shows/hides sections based on the URL hash. -->
-
       <section id="home" class="page card" data-title="Home">
         <h1>Home</h1>
 
