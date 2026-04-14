@@ -15,23 +15,61 @@
     }
     *{box-sizing:border-box}
     body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; margin:0; background:var(--bg); color:#173F5F; line-height:1.5}
-    .container{max-width:var(--max-width); margin:28px auto; padding:20px}
-    header{display:flex; gap:20px; align-items:center; margin-bottom:18px}
-    .brand{display:flex; gap:12px; align-items:center}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .container{
+      max-width:var(--max-width);
+      margin:28px auto;
+      padding:20px}
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin-bottom:18px}
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center}
+    .logo{
+      width:48px;
+      height:48px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#4f46e5);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700}
     nav{margin-left:auto}
-    nav ul{display:flex;gap:8px;list-style:none;padding:0;margin:0}
-    nav a{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
-    nav a.active{background:rgba(37,99,235,0.1);color:var(--accent)}
+    nav ul{
+      display:flex;
+      gap:8px;
+      list-style:none;
+      padding:0;
+      margin:0}
+    nav a{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600}
+    nav a.active{
+      background:rgba(37,99,235,0.1);
+      color:var(--accent)}
     main{background:transparent}
     .card{
       background:var(--card);
       padding:8px 12px;
       border-radius:var(--radius);
       box-shadow:0 6px 18px rgba(15,23,42,0.06)}
-    h1{margin:0 0 0 0}
-    h2{margin:0 0 0 0}
-    h3{margin:0 0 0 0}
+
+    h1{
+      margin:0 0 0 0;}
+    h2{
+      margin:0 0 0 0;
+      color: #045149;}
+    h3{
+      margin:0 0 0 0;}
+
     .card :is(h1, h2, h3) {
       margin-top: 0;
     }
@@ -52,7 +90,11 @@
     p.lead{color:var(--muted);margin-top:0}
     .row{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:16px}
     aside.card{height:fit-content}
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px}
+    footer{
+      margin-top:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px}
 
     div {
       text-align: justify;
@@ -129,10 +171,12 @@
         <div class="card" style="margin-top:12px">
           <h2>Interesting Events</h2>
           <ul>
-            <li>18-22.05.2026: <a href="http://www.esgi.dk/" target="_blank">ESGI European Study Group for Industry</a>, Danmarks Tekniske Universitet</li>
-            <li>15-19.06.2026: <a href="https://sites.google.com/go.ugr.es/biomat2026/home" target="_blank">BIOMAT 2026</a>, Universidad de Granada</li>
-            <li>13-17.07.2026: <a href="https://ecmtb2026.org/" target="_blank">14th European Conference on Mathematical & Theoretical Biology</a>, Karl-Franzens-Universität Graz</li>
-            <li>08-11.09.2026: <a href="https://sites.google.com/view/durham-spatial-biology/" target="_blank">Mathematical Approaches to Spatial Biology</a>, Durham University</li>
+            <li>18-22.05.2026: <a href="http://www.esgi.dk/" target="_blank">ESGI European Study Group for Industry</a>, Danmarks Tekniske Universitet, DK</li>
+            <li>15-19.06.2026: <a href="https://sites.google.com/go.ugr.es/biomat2026/home" target="_blank">BIOMAT 2026</a>, Universidad de Granada, SP</li>
+            <li>06-10.07.2026: <a href="https://aimsconference.org/conferences/2026/index.html" target="_blank">15th AIMS Conference</a>, Athens, GR</li>
+            <li>13-17.07.2026: <a href="https://ecmtb2026.org/" target="_blank">14th European Conference on Mathematical & Theoretical Biology</a>, Karl-Franzens-Universität Graz, AT</li>
+            <li>19-24.07.2026: <a href="https://dde-2026.sci-meet.net/" target="_blank">XLVI Dynamics Days Europe 2026 (DDE 2026)</a>, Universidade NOVA de Lisboa, PT</li>
+            <li>08-11.09.2026: <a href="https://sites.google.com/view/durham-spatial-biology/" target="_blank">Mathematical Approaches to Spatial Biology</a>, Durham University, UK</li>
           </ul>
         </div>
 
@@ -158,7 +202,7 @@
 
         <!-- Photo -->
         <div class="row" style="display:grid; grid-template-columns:220px 1fr; gap:20px; align-items:start; margin-top:0px">
-          <img src="images/profile.jpg" alt="Reymart Salcedo Lagunero Dr.rer.nat." style="width:100%; border-radius:10px">
+          <img src="images/profile.png" alt="Reymart Salcedo Lagunero Dr.rer.nat." style="width:100%; border-radius:10px">
 
           <aside>
             <p> I am an active member of the Mathematical Society of the Philippines (MSP), the Southeast Asian Mathematical Society (SEAMS), the Philippine Society for Mathematical Biology (PSMB), and the European Society for Mathematical and Theoretical Biology (ESMTB). </p>
@@ -282,9 +326,9 @@
         <div class="card" style="margin-top:12px">
           <h2>Current Projects</h2>
           <ul>
-            <li>On the enzymology of mouse ATGL -- new insights from in vitro studies and mathematical modeling</li>
             <li>Lipolysis on Lipid Droplets: Modelling and Quasi-Steady-State-Approximations</li>
             <li>Fast reaction limit from the mass-action kinetics to the Michaelis-Menten kinetics at the finite volume level</li>
+            <li>On the enzymology of mouse ATGL -- new insights from in vitro studies and mathematical modeling</li>
           </ul>
 
           <h2>Publications</h2>
@@ -345,16 +389,16 @@
           <ul>
             <li><b>Department of Mathematics and Scientific Computing, University of Graz, Austria</b></li>
             <ul>
-              <li>11.2025 - 03.2026 University Assistant Postdoc</li>
-              <li>10.2024 - 03.2025 University Assistant Predoc</li>
-              <li>01.2024 - 06.2024 University Assistant Predoc</li>
-              <li>08.2019 - 08.2023 Project Assistant - PhD Student</li>
+              <li>11.2025 - 03.2026 University Assistant Postdoc (40hrs/week)</li>
+              <li>10.2024 - 03.2025 University Assistant Predoc (40hrs/week)</li>
+              <li>01.2024 - 06.2024 University Assistant Predoc (40hrs/week)</li>
+              <li>08.2019 - 08.2023 Project Assistant - PhD Student (30hrs/week)</li>
             </ul>
             <li><b>Department of Mathematics and Computer Science, University of the Philippines Baguio</b></li>
             <ul>
-              <li>08.2018 - 07.2019 University Assistant Professor 1</li>
-              <li>08.2016 - 05.2017 Lecturer 1</li>
-              <li>08.2014 - 07.2016 Instructor 1</li>
+              <li>08.2018 - 07.2019 University Assistant Professor 1 (Full-time)</li>
+              <li>08.2016 - 05.2017 Lecturer 1 (Part-time)</li>
+              <li>08.2014 - 07.2016 Instructor 1 (Full-time)</li>
             </ul>
           </ul>
         </div>
