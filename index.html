@@ -414,19 +414,17 @@
           </p>
 
           <p>
-          \[
-          \partial_t u = D \Delta u + f(u), \quad x \in \Omega
-          \]
+            \[ \begin{cases}
+              \partial_t u - d_u \Delta u = f(u,v), & x \in \Omega,\\
+              \partial_t v - d_v \Delta v = g(u,v), & x \in \Omega,\\
+              \partial_{n} u = \partial_{n} v = 0, & x \in \partial\Omega,\\
+              u(0,x) = u_{0}(x), & x \in \Omega,\\
+              v(0,x) = v_{0}(x), & x \in \Omega,
+            \end{cases} \]
           </p>
 
           <p>
-            where \( f(u) \) encodes reaction kinetics such as Michaelis-Menten dynamics:
-          </p>
-
-          <p>
-          \[
-          f(u) = \frac{V_{max} u}{K_m + u}
-          \]
+            where \( f \) and \( g \) encode reaction kinetics such as Michaelis-Menten dynamics.
           </p>
         </div>
       </section>
