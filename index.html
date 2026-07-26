@@ -438,8 +438,11 @@
     </main>
 
     <footer>
-      <div class="muted">© Reymart Salcedo Lagunero — <span id="year"></span></div>
-    </footer>
+    <div class="muted">
+      © Reymart Salcedo Lagunero<br>
+      <span id="last-updated">Last updated: loading...</span>
+    </div>
+  </footer>
   </div>
 
   <script>
@@ -468,17 +471,27 @@
     // initialize
     handleHash();
 
-    // footer year
-    const d = new Date();
-    const options = { month: 'long', year: 'numeric' };
-    document.getElementById('year').textContent = d.toLocaleDateString('en-US', options);
-
     // keyboard navigation: numbers 1-6 switch pages
     window.addEventListener('keydown', e => {
       if (e.metaKey || e.ctrlKey) return;
       const map = {"1":"home","2":"about","3":"teaching","4":"research","5":"cv","6":"extracurricular"};
       if (map[e.key]) location.hash = '#'+map[e.key];
     });
+
+    // Load GitHub Actions last updated date
+    fetch("last-updated.json")
+      .then(response => response.json())
+      .then(data => {
+          document.getElementById("last-updated").textContent =
+            "Last updated: " + data.lastUpdated;
+      })
+      .catch(error => {
+          document.getElementById("last-updated").textContent =
+            "Last updated: unavailable";
+          console.error(error);
+      });
+
+    
   </script>
 </body>
 </html>
