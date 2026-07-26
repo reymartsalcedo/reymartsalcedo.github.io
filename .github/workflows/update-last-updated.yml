@@ -17,7 +17,7 @@ jobs:
 
       - name: Generate timestamp
         run: |
-          echo "{\"lastUpdated\":\"$(TZ="Europe/Copenhagen" date +"%d %B %Y, %H:%M %Z")\"}" > last-updated.json
+          echo "{\"lastUpdated\":\"$(TZ="Europe/Copenhagen" date +"%d %B %Y, %H:%M %Z") (Copenhagen)\"}" > last-updated.json
 
       - name: Commit file
         run: |
